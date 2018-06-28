@@ -1,4 +1,4 @@
-{
+const countries = {
     "AD": "Andorra",
     "AE": "United Arab Emirates",
     "AF": "Afghanistan",
@@ -254,3 +254,5 @@
     "ZM": "Zambia",
     "ZW": "Zimbabwe"
   }
+
+  export default countries;
