@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { HashRouter as Router, Route, Link } from "react-router-dom";
 import { Layout, Menu, Icon, Row, Col } from "antd";
 import { Provider } from "react-redux";
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import './App.css';
 
 class App extends Component {
