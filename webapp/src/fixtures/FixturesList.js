@@ -12,7 +12,7 @@ export default class FixtureList extends Component {
         fixtures.rounds.map(round => {
             round.matches.map(match => {
                 match.team1.avatar = this.getAvatar(match.team1.name);
-                match.team1.avatar = this.getAvatar(match.team2.name);
+                match.team2.avatar = this.getAvatar(match.team2.name);
                 match.sortTime = `${match.date}T${match.time}`;
                 match.time = moment(
                     `${match.date}T${match.time}+0${match.timezone.substr(

@@ -39,7 +39,7 @@ class App extends Component {
                 </Col>
                 <Col lg={{span: 8, offset: 8}} xs={8}>
                   <h3>
-                    <a href="https://github.com/chandrn/wc2018" target="_blank">
+                    <a href="https://github.com/vgutta/WorldCup2018" target="_blank">
                       <Icon type="github" />
                     </a>
                   </h3>
