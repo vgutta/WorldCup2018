@@ -52,8 +52,18 @@ class App extends Component {
                 collapsed={this.state.collapsed}
                 onCollapse={this.onCollapse}
               >
-                <Menu>
-                  
+                <Menu
+                  style={{ height: "100%", borderRight: 0}}
+                  defaultSelectedKeys={["1"]}
+                  mode="inline"
+                  theme="dark"
+                >
+                  <Menu.Item key="1">
+
+                  </Menu.Item>
+                  <Menu.Item key="2">
+                    
+                  </Menu.Item>
                 </Menu>
               </Sider>
             </Layout>
