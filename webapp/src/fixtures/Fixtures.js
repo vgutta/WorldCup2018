@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'react';
-import * as FixtureActions from './fixturesActions'
+import { bindActionCreators } from 'redux';
+import * as FixtureActions from './fixturesActions';
 import FixturesList from './FixturesList';
 
 class Fixtures extends React.Component {
@@ -16,7 +16,6 @@ class Fixtures extends React.Component {
         }
         return <FixturesList fixtures={fixtures.fixtures} />;
     }
-
 }
 
 function mapStateToProps(store) {

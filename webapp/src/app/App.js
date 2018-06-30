@@ -59,13 +59,33 @@ class App extends Component {
                   theme="dark"
                 >
                   <Menu.Item key="1">
-
+                    <Icon type="calendar" />
+                    <span>Fixtures</span>
+                    <Link to="/" />
                   </Menu.Item>
                   <Menu.Item key="2">
-                    
+                    <Icon type="bar-chart" />
+                    <span>Groups</span>
+                    <Link to="/groups" />
                   </Menu.Item>
                 </Menu>
               </Sider>
+              <Layout>
+                <Content 
+                  style={{
+                    background: "#fff",
+                    padding: 24,
+                    margin: 0,
+                    minHeight: 280
+                  }}
+                >
+                  <Route exact path="/" component={Fixtures} />
+                  <Route exact path="/groups" component={Groups} />
+                </Content>
+                <Footer style={{ textAlign: "center"}}>
+                    Data by {"Open Football"}
+                </Footer>
+              </Layout>
             </Layout>
           </Layout>
         </Router>
