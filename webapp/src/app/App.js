@@ -31,10 +31,32 @@ class App extends Component {
           <Layout>
             <Header 
               style={{ background: "#001529", padding: 0, paddingLeft: 16}}
-              className={header}
+              className="header"
             >
-              
+              <Row className="logo">
+                <Col lg={8} xs={16}>
+                  <h3>FIFA World Cup 2018 Fixtures and Results</h3>
+                </Col>
+                <Col lg={{span: 8, offset: 8}} xs={8}>
+                  <h3>
+                    <a href="https://github.com/chandrn/wc2018" target="_blank">
+                      <Icon type="github" />
+                    </a>
+                  </h3>
+                </Col>
+              </Row>
             </Header>
+            <Layout>
+              <Sider
+                collapsible
+                collapsed={this.state.collapsed}
+                onCollapse={this.onCollapse}
+              >
+                <Menu>
+                  
+                </Menu>
+              </Sider>
+            </Layout>
           </Layout>
         </Router>
       </Provider>

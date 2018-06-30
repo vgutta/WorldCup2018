@@ -8,7 +8,7 @@ export function fetchFixtures() {
                 dispatch({type: "FETCH_FIXTURES_FULLFILLED", payload: response.data});
             })
             .catch(err => {
-                dispatch({type: "FETCH_FIXTURES_REJECTED", payload: response.err});
+                dispatch({type: "FETCH_FIXTURES_REJECTED", payload: err});
             });
     };
 }

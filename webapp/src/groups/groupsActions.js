@@ -8,7 +8,7 @@ export function fetchGroups() {
                 dispatch({type: "FETCH_GROUPS_FULLFILLED", payload: response.data});
             })
             .catch(error => {
-                dispatch({type: "FETCH_GROUPS_REJECTED", payload: response.error});
+                dispatch({type: "FETCH_GROUPS_REJECTED", payload: error});
             });
     };  
 }

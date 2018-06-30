@@ -1,11 +1,12 @@
-export default function reducer(action) {
+export default function reducer(
     state = {
         fixtures: {},
         fetching: false,
         fetch: false,
         error: null
-    }
-
+    },
+    action
+) {
     switch(action.type) {
         case "FETCH_FIXTURES": {
             return {...state, fetching: true};
