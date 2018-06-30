@@ -21,6 +21,10 @@ export default class FixtureList extends Component {
                 )
                     .tz(moment.tz.guess())
                     .format("DD MMM YYYY hh:mmA z");
+                match.isCurrent = moment(match.sortTime).isBetween(
+                    moment(),
+                    moment().subtract({ hours: "02" })
+                );
                 match.isBefore = moment(match.sortTime).isBefore(moment());
                 if (match.score1 !== null || (!match.isCurrent && match.isBefore)) {
                     completedMatches.push(match);
@@ -75,7 +79,7 @@ export default class FixtureList extends Component {
         return (
             <List.Item>
                 <List.Item.Meta 
-                    tite={
+                    title={
                         <Row>
                             <Col xs={2} lg={2}>
                                 <Avatar src={item.team1.avatar} />
@@ -86,6 +90,11 @@ export default class FixtureList extends Component {
                             {item.score1 !== null && (
                                 <Col xs={24} lg={4} style={{ textAlign: "center"}}>
                                     <h3>{item.score1}</h3>
+                                </Col>
+                            )}
+                            {item.score1 !== null && (
+                                <Col xs={24} lg={8} style={{ textAlign: "center"}}>
+                                    vs
                                 </Col>
                             )}
                             {item.score2 !== null && (
