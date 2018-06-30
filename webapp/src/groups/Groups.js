@@ -14,7 +14,7 @@ class Groups extends Component {
         if (!groups.fetched) {
             return <div>Empty</div>;
         }
-        return <GroupCards groups={groups.groups}/>;
+        return <GroupCards groups={groups.groups.groups}/>;
     }
 }
 
