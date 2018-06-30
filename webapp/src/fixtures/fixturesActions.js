@@ -10,5 +10,5 @@ export function fetchFixtures() {
             .catch(err => {
                 dispatch({type: "FETCH_FIXTURES_REJECTED", payload: response.err});
             });
-    }
+    };
 }

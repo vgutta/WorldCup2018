@@ -1,6 +1,6 @@
 import React from 'react';
-import { connect} from 'react-redux';
-import {bindActionCreators} from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'react';
 import * as FixtureActions from './fixturesActions'
 import FixturesList from 'FixturesList';
 
